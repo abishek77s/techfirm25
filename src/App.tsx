@@ -6,7 +6,7 @@ import EventsPage from "./pages/EventsPage";
 function App() {
   return (
     <Router>
-      <div className="pb-[80px] md:pb-0">
+      <div className="">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
