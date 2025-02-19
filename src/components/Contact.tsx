@@ -1,20 +1,34 @@
-import { MotionProps, motion } from "framer-motion";
+import { MotionProps, motion, useInView } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiMapPin } from "react-icons/fi";
 import { SiDiscord, SiGmail, SiInstagram, SiWhatsapp } from "react-icons/si";
+import { useRef, useState, useEffect } from "react";
 
 const Contact = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-100px" });
+
+  // Track if the animation has already been triggered
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated]);
+
   return (
     <section id="contact">
       <div className="min-h-screen px-4 py-2 text-zinc-50">
-        <div className="flex items-center justify-center mt-24   ">
-          <h1 className="text-4xl font-bold mb-10  font-geist text-white">
+        <div className="flex items-center justify-center mt-24">
+          <h1 className="text-4xl font-bold mb-10 font-geist text-white">
             Contact
           </h1>
         </div>
         <motion.div
+          ref={ref}
           initial="initial"
-          animate="animate"
+          animate={hasAnimated ? "animate" : "initial"}
           transition={{
             staggerChildren: 0.05,
           }}
