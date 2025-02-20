@@ -263,8 +263,8 @@ const EventsDetail: React.FC = () => {
 
     if (eventCategories[activeTab].cardCount === 1) {
       return (
-        <div className="grid grid-cols-1 gap-4">
-          <div className="w-full max-w-sm mx-auto">
+        <div className="flex justify-center">
+          <div className="w-full max-w-sm">
             <TitledCard {...createEventCard(events[0].data)}>Hello</TitledCard>
           </div>
         </div>
@@ -277,18 +277,18 @@ const EventsDetail: React.FC = () => {
     return (
       <>
         {/* First row - 3 cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {firstRow.map((event, cardIndex) => (
-            <div key={cardIndex} className="w-full">
+            <div key={cardIndex} className="w-full flex justify-center">
               <TitledCard {...createEventCard(event.data)}>Hello</TitledCard>
             </div>
           ))}
         </div>
 
         {/* Second row - 2 cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:w-2/3 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:w-2/3 mx-auto gap-6 justify-center mt-4">
           {secondRow.map((event, cardIndex) => (
-            <div key={cardIndex} className="w-full">
+            <div key={cardIndex} className="w-full flex justify-center">
               <TitledCard {...createEventCard(event.data)}>Hello</TitledCard>
             </div>
           ))}
