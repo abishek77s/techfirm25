@@ -197,7 +197,7 @@ const eventCategories: EventCategory[] = [
             "Test your logical reasoning and creativity! Connection is a fun and challenging event where participants must find the hidden link between given clues. Think out of the box and connect the dots!",
           rules: [
             "All participants must wear their college ID card.",
-            "This is an individual event.",
+            "Two members can participate.",
             "Various sets of images, words, or puzzles will be given, and participants must identify the correct connection.",
             "Time will be a key factor in determining winners.",
             "Participants will be evaluated based on accuracy, speed, and logical thinking.",
