@@ -19,7 +19,7 @@ export default {
          
       fontFamily: {
           'geist-mono': ['"Geist Mono"', 'monospace'], 
-        'geist': ["Geist", "serif"],
+        'geist': ["Geist", "sans-serif"],
       },
     },
   },
