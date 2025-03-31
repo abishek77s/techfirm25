@@ -104,7 +104,7 @@ const sections = [
       </svg>
     ),
     title: "Online",
-    text: "Join the action and dive into Bermuda with your",
+    text: "Join the action and dive into Bermuda with your squad.",
   },
 ];
 
